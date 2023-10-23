@@ -19,7 +19,6 @@ contract CounterTest is Test {
     function test_isBlind_tokenURI() public {
         vm.startPrank(user1);
         RandomMintERC721Contract.mint(user1);
-        // string memory isBlindTokenURI = RandomMintERC721Contract.tokenURI(1);
         assertEq(RandomMintERC721Contract.tokenURI(1), "ipfs://QmUtEJYJbZu7wmT34fKBPTSzYLfMxwjzvaRjJ5dLQRjBVR");
         vm.stopPrank();
     }
@@ -31,7 +30,6 @@ contract CounterTest is Test {
 
         vm.startPrank(user1);
         RandomMintERC721Contract.mint(user1);
-        // string memory revealTokenURI = RandomMintERC721Contract.tokenURI(1);
         assertEq(RandomMintERC721Contract.tokenURI(1), "ipfs://QmWw9UEQ4gBGjsjKBE1g1UhbupkJicK8QRxTvUzbTrp26F");
         vm.stopPrank();        
     }
